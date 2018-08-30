@@ -4,7 +4,7 @@ function TrelloApp(currState, action) {
       const list = currState.currentBoard.lists.find(list => list.id === action.payload.listId);
       const index = currState.currentBoard.lists.indexOf(list);
       const newList = Object.assign({}, list, {
-        cards: [...list.cards, { id: '' + Math.random()*8181, text: action.payload.text }]
+        cards: [...list.cards, { id: '' + Math.random()*89793113, text: action.payload.text }]
       });
       return Object.assign({}, currState, {
         currentBoard: Object.assign({}, currState.currentBoard, {
@@ -29,7 +29,7 @@ function TrelloApp(currState, action) {
 
     case 'CREATE_LIST':
         const newlist = {
-              id: '' + Math.random() * 8181,
+              id: '' + Math.random() * 89793113,
               name: action.payload.name,
               cards: []
             };
@@ -147,7 +147,9 @@ function TrelloApp(currState, action) {
       return currState;
   }
 }
+
 module.exports = TrelloApp;
+
 /*
   {
     currentBoard: {
